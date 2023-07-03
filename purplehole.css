@@ -1,0 +1,173 @@
+body {
+  background-color: #1D0042;
+  background-image: radial-gradient(ellipse at 50% 52.5%, #000000 20%, #1D0042 50%);
+  background-repeat: no-repeat;
+  background-size:150vw 300vh;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bigStar {
+  width: 0.5vh;
+  height: 0.5vh;
+  background:white;
+  clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
+}
+
+.glow {
+  position: absolute;
+  filter: drop-shadow(0 0 1vh #ffffff);
+}
+
+.smallStar {
+  position: absolute;
+  width: 0.1vh;
+  height: 0.1vh;
+  background:white;
+}
+
+.blackHoleA {
+  width: 20vh;
+  height: 10vh;
+  background:black;
+  position: absolute;
+  border-top-left-radius: 10vh;
+  border-top-right-radius: 10vh;
+  top:40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  z-index:5;
+}
+.blackHoleB {
+  width: 20vh;
+  height: 10vh;
+  background:black;
+  position: absolute;
+  border-bottom-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+  top:55%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  z-index:2;
+}
+
+.bgrA {
+  width: 22.5vh;
+  height: 12.5vh;
+  background-color:#550c31;
+  background-image: radial-gradient(ellipse at 50% 50%, #000000, #550c31);
+  /* background-image: url(noise.png); */
+  position: absolute;
+  border-top-left-radius: 10vh;
+  border-top-right-radius: 10vh;
+  top:40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  outline: 0.25vh solid white;
+  z-index:4;
+}
+
+.bgrB {
+  width: 22.5vh;
+  height: 12.5vh;
+  background-color:#550c31;
+  background-image: radial-gradient(ellipse at 50% 50%, #000000, #550c31);
+  /* background-image: url(noise.png); */
+  position: absolute;
+  border-bottom-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+  top:55%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  outline: 0.25vh solid white;
+  z-index:1;
+}
+
+.bgrh {
+  width: 40vh;
+  height: 3vh;
+  background-color:#550c31;
+  background-image: radial-gradient(ellipse at 50% 50%, #000000 , #550c31);
+  background-repeat: repeat-x;
+  /* background-image: url(noise.png); */
+  position: absolute;
+  border-radius: 50%/100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  outline: 0.25vh solid white;
+  z-index:3;
+}
+
+.bgGlow {
+  position: absolute;
+  filter: drop-shadow(0 0 25vh #dd2080);
+  position: absolute;
+  border-radius: 50%/100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index:9;
+}
+
+.title {
+  position: absolute;
+  top: 12%;
+  right: 25%;
+  bottom: 76%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tText {
+  color: white;
+  font-family: monospace;
+  text-shadow: 0 0 1em #ffffff;
+  font-size: 5vh;
+  text-align: center;
+}
+
+@keyframes glimmer {
+  0%{
+    clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
+  }
+  50% {
+    clip-path: polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 39%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
+  }
+}
+
+.sinkingStar {
+  width: 0.75vh;
+  height: 0.75vh;
+  background:white;
+  clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
+  position:relative;
+  z-index:90;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+    z-index:90;
+  }
+  100% {
+    offset-distance: 100%;
+    z-index:0;
+  }
+}
